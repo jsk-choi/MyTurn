@@ -5,10 +5,24 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
+using AutoMapper;
+
+using MyTurn.Db;
+using MyTurn.Service;
+
+using ef = MyTurn.Db;
+using dto = MyTurn.Web.Models;
+
 namespace MyTurn.Web.Api
 {
     public class TestController : ApiController
     {
+        private readonly IPersonService PersonService;
+
+        public TestController(IPersonService _personService) {
+            PersonService = _personService;
+        }
+
         // GET: api/Test
         public IEnumerable<string> Get()
         {
@@ -16,14 +30,18 @@ namespace MyTurn.Web.Api
         }
 
         // GET: api/Test/5
-        public string Get(int id)
+        public IHttpActionResult Get(string id)
         {
-            return "value";
+            var person = PersonService.Get(id);
+            var personDto = Mapper.Map<dto.Person>(person);
+            return Ok(personDto);
         }
 
         // POST: api/Test
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post([FromBody]dto.Person person)
         {
+            var personEf = Mapper.Map<Person>(person);
+            return Ok(PersonService.AddUpdate(personEf));
         }
 
         // PUT: api/Test/5

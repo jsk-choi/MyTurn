@@ -8,8 +8,8 @@ using MyTurn.Db;
 
 namespace MyTurn.Service.Interface
 {
-    interface IQueueHeader
+    interface IQueueDetailService
     {
-        QueueHeader AddUpdate(QueueHeader vendor);
+        QueueDetail AddUpdate(QueueDetail vendor);
     }
 }

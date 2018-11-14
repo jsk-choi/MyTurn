@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MyTurn.Db;
-using MyTurn.Service.Interface;
 
 namespace MyTurn.Service
 {
-    class PersonService : IPerson
+    public class PersonService : IPersonService
     {
         public async Task<Person> AddUpdate(Person person)
         {
@@ -26,10 +25,19 @@ namespace MyTurn.Service
                 }
                 else
                 {
+                    person.CreateDate = DateTime.Now;
                     ctx.Person.Add(person);
                     await ctx.SaveChangesAsync();
                     return person;
                 }
+            }
+        }
+
+        public Person Get(string Id)
+        {
+            using (var ctx = new MyTurnDb())
+            {
+                return ctx.Person.Where(x => x.TelSms == Id).FirstOrDefault();
             }
         }
     }

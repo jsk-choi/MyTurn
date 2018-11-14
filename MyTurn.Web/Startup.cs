@@ -1,6 +1,10 @@
-﻿using Microsoft.Owin;
+﻿using AutoMapper;
+using Microsoft.Owin;
 using Owin;
 using System.Configuration;
+
+using ef = MyTurn.Db;
+using dto = MyTurn.Web.Models;
 
 [assembly: OwinStartupAttribute(typeof(MyTurn.Web.Startup))]
 namespace MyTurn.Web
@@ -10,7 +14,10 @@ namespace MyTurn.Web
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            var appSettings = ConfigurationManager.AppSettings;
+            
+            Mapper.Initialize(c => {
+                c.CreateMap<ef.Person, dto.Person>().ReverseMap();
+            });
         }
     }
 }

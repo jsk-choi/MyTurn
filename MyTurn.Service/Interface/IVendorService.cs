@@ -8,7 +8,7 @@ using MyTurn.Db;
 
 namespace MyTurn.Service.Interface
 {
-    interface IVendor
+    interface IVendorService
     {
         Vendor AddUpdate(Vendor vendor);
     }

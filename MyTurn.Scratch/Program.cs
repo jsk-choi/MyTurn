@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using MyTurn.Db;
 
-namespace MyTurn.Service.Interface
+
+namespace MyTurn.Scratch
 {
-    interface IPerson
+    class Program
     {
-        Task<Person> AddUpdate(Person person);
+        static void Main(string[] args)
+        {
+        }
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD76B69B-865C-4770-82EF-CFFC7E23F2F2}</ProjectGuid>
+    <ProjectGuid>{0291455C-0BF0-4F76-BFF2-564F5044C30B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MyTurn.Service</RootNamespace>
@@ -48,11 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\IQueueDetail.cs" />
-    <Compile Include="Interface\IQueueHeader.cs" />
-    <Compile Include="Interface\IPerson.cs" />
-    <Compile Include="Interface\IVendor.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Interface\IPersonService.cs" />
+    <Compile Include="Interface\IQueueDetailService.cs" />
+    <Compile Include="Interface\IQueueHeaderService.cs" />
+    <Compile Include="Interface\IVendorService.cs" />
+    <Compile Include="QueueHeaderService.cs" />
+    <Compile Include="PersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,12 +63,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <Content Include="connStr.safe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
