@@ -213,6 +213,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\QueueDetailController.cs" />
+    <Compile Include="Api\VendorController.cs" />
+    <Compile Include="Api\PersonController.cs" />
+    <Compile Include="Api\QueueHeaderController.cs" />
     <Compile Include="Api\TestController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -228,7 +232,10 @@
     </Compile>
     <Compile Include="Helpers\IdentityHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Dto\QueueDetail.cs" />
+    <Compile Include="Models\Dto\Vendor.cs" />
+    <Compile Include="Models\Dto\QueueHeader.cs" />
+    <Compile Include="Models\Dto\Person.cs" />
     <Compile Include="Models\RoleNames.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -341,7 +348,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Dto\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

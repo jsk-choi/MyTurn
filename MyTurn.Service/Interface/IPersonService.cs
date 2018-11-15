@@ -10,7 +10,7 @@ namespace MyTurn.Service
 {
     public interface IPersonService
     {
-        Person Get(string Id);
         Task<Person> AddUpdate(Person person);
+        Task<Person> Get(int Id);
     }
 }

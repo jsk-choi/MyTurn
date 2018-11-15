@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 using MyTurn.Db;
 
-namespace MyTurn.Service.Interface
+namespace MyTurn.Service
 {
-    interface IQueueDetailService
+    public interface IQueueDetailService
     {
-        QueueDetail AddUpdate(QueueDetail vendor);
+        Task<QueueDetail> AddUpdate(QueueDetail queueDetail);
+        Task<IList<QueueDetail>> Get(int queueHeaderId);
+        //Task<IList<QueueDetail>> Get(int Id);
     }
 }

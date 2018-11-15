@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 using MyTurn.Db;
 
-namespace MyTurn.Service.Interface
+namespace MyTurn.Service
 {
-    interface IVendorService
+    public interface IVendorService
     {
-        Vendor AddUpdate(Vendor vendor);
+        Task<Vendor> AddUpdate(Vendor vendor);
+        Task<IList<Vendor>> Get();
+        Task<Vendor> Get(int Id);
     }
 }

@@ -16,11 +16,11 @@ using System.Threading.Tasks;
 
 namespace MyTurn.Web.Api
 {
-    public class TestController : ApiController
+    public class PersonController : ApiController
     {
         private readonly IPersonService PersonService;
 
-        public TestController(IPersonService _personService) {
+        public PersonController(IPersonService _personService) {
             PersonService = _personService;
         }
 

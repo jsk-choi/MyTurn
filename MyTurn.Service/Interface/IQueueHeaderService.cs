@@ -11,6 +11,7 @@ namespace MyTurn.Service
     public interface IQueueHeaderService
     {
         Task<QueueHeader> AddUpdate(QueueHeader queueHeader);
-        Task<QueueHeader> Get(int Id);
+        Task<IList<QueueHeader>> Get();
+        Task<IList<QueueHeader>> Get(int VendorId);
     }
 }

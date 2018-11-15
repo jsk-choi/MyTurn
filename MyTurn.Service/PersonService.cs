@@ -14,30 +14,32 @@ namespace MyTurn.Service
         {
             using (var ctx = new MyTurnDb()) {
 
-                var thisPerson = ctx.Person.Where(x => x.Id == person.Id);
+                var thisPerson = ctx.Person
+                    .Where(x => x.TelSms == person.TelSms)
+                    .SingleOrDefault();
 
-                if (thisPerson.Any())
-                {
-                    var thisPersonSave = thisPerson.FirstOrDefault();
-                    thisPersonSave = person;
-                    await ctx.SaveChangesAsync();
-                    return thisPersonSave;
-                }
-                else
+                if (thisPerson == null)
                 {
                     person.CreateDate = DateTime.Now;
                     ctx.Person.Add(person);
-                    await ctx.SaveChangesAsync();
+                    var task = await ctx.SaveChangesAsync();
                     return person;
+                }
+                else
+                {
+                    thisPerson = person;
+                    var task = await ctx.SaveChangesAsync();
+                    return thisPerson;
                 }
             }
         }
 
-        public Person Get(string Id)
+        public async Task<Person> Get(int Id)
         {
             using (var ctx = new MyTurnDb())
             {
-                return ctx.Person.Where(x => x.TelSms == Id).FirstOrDefault();
+                var jjj = await ctx.Person.FindAsync(Id);
+                return jjj;
             }
         }
     }

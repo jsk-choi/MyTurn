@@ -10,21 +10,14 @@ namespace MyTurn.Db
     public partial class QueueDetail
     {
         public int Id { get; set; }
-
         public bool Active { get; set; }
-
         public DateTime CreateDate { get; set; }
-
         public int QueueHeaderId { get; set; }
-
         public int QueueStatusId { get; set; }
-
         public int PersonId { get; set; }
-
+        public decimal Sort { get; set; }
         public virtual Person Person { get; set; }
-
         public virtual QueueHeader QueueHeader { get; set; }
-
         public virtual QueueStatus QueueStatus { get; set; }
     }
 }

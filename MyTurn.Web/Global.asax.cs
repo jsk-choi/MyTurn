@@ -39,6 +39,9 @@ namespace MyTurn.Web
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             builder.RegisterType<PersonService>().As<IPersonService>();
+            builder.RegisterType<QueueDetailService>().As<IQueueDetailService>();
+            builder.RegisterType<QueueHeaderService>().As<IQueueHeaderService>();
+            builder.RegisterType<VendorService>().As<IVendorService>();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

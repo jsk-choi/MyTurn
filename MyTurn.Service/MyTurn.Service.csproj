@@ -52,6 +52,8 @@
     <Compile Include="Interface\IQueueDetailService.cs" />
     <Compile Include="Interface\IQueueHeaderService.cs" />
     <Compile Include="Interface\IVendorService.cs" />
+    <Compile Include="QueueDetailService.cs" />
+    <Compile Include="VendorService.cs" />
     <Compile Include="QueueHeaderService.cs" />
     <Compile Include="PersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

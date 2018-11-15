@@ -14,9 +14,12 @@ namespace MyTurn.Web
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            
+
             Mapper.Initialize(c => {
                 c.CreateMap<ef.Person, dto.Person>().ReverseMap();
+                c.CreateMap<ef.QueueDetail, dto.QueueDetail>().ReverseMap();
+                c.CreateMap<ef.QueueHeader, dto.QueueHeader>().ReverseMap();
+                c.CreateMap<ef.Vendor, dto.Vendor>().ReverseMap();
             });
         }
     }
