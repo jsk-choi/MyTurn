@@ -32,12 +32,26 @@ namespace MyTurn.Web.Api
             return Ok(queueDetailsDto);
         }
 
+        public async Task<IHttpActionResult> Get(int queueHeaderId, int queueDetailId)
+        {
+            var queueDetails = await QueueDetailService.Get(queueHeaderId);
+            var queueDetailsDto = Mapper.Map<IList<dto.QueueDetail>>(queueDetails);
+            return Ok(queueDetailsDto);
+        }
+
         // POST: api/QueueDetail
         public async Task<IHttpActionResult> Post([FromBody]dto.QueueDetail queueDetail)
         {
+            var isInLine = await QueueDetailService.IsInLine(queueDetail.QueueHeaderId, queueDetail.PersonId);
+
+            if (isInLine) {
+                return BadRequest("Already in line.");
+            }
+
             var queueDetailEf = Mapper.Map<QueueDetail>(queueDetail);
             var queueDetailNew = await QueueDetailService.AddUpdate(queueDetailEf);
             var queueDetailDto = Mapper.Map<dto.QueueDetail>(queueDetailNew);
+
             return Ok(queueDetailDto);
         }
 

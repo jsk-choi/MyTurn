@@ -12,6 +12,7 @@ namespace MyTurn.Service
     {
         Task<QueueDetail> AddUpdate(QueueDetail queueDetail);
         Task<IList<QueueDetail>> Get(int queueHeaderId);
-        //Task<IList<QueueDetail>> Get(int Id);
+        Task<QueueDetail> Get(int queueHeaderId, int personId);
+        Task<bool> IsInLine(int queueHeaderId, int personId);
     }
 }
