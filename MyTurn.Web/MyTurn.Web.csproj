@@ -243,12 +243,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -261,48 +255,17 @@
     <Content Include="connStr.safe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\lib\bootstrap.bundle.js" />
-    <Content Include="Scripts\lib\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\lib\bootstrap.js" />
-    <Content Include="Scripts\lib\bootstrap.min.js" />
-    <Content Include="Scripts\lib\bootstrap.min.js.map" />
-    <Content Include="Scripts\lib\bootstrap.js.map" />
-    <Content Include="Scripts\lib\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\lib\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Scripts\lib\esm\popper-utils.js" />
-    <Content Include="Scripts\lib\esm\popper-utils.min.js" />
-    <Content Include="Scripts\lib\esm\popper.js" />
-    <Content Include="Scripts\lib\esm\popper.min.js" />
-    <Content Include="Scripts\lib\esm\popper.min.js.map" />
-    <Content Include="Scripts\lib\esm\popper.js.map" />
-    <Content Include="Scripts\lib\esm\popper-utils.min.js.map" />
-    <Content Include="Scripts\lib\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="whooo.html" />
-    <None Include="Scripts\lib\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\lib\jquery-3.3.1.js" />
-    <Content Include="Scripts\lib\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\lib\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\lib\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\lib\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\lib\jquery.validate.js" />
-    <Content Include="Scripts\lib\jquery.validate.min.js" />
-    <Content Include="Scripts\lib\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\lib\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\lib\modernizr-2.8.3.js" />
-    <Content Include="Scripts\lib\popper-utils.js" />
-    <Content Include="Scripts\lib\popper-utils.min.js" />
-    <Content Include="Scripts\lib\popper.js" />
-    <Content Include="Scripts\lib\popper.min.js" />
-    <Content Include="Scripts\lib\umd\popper-utils.js" />
-    <Content Include="Scripts\lib\umd\popper-utils.min.js" />
-    <Content Include="Scripts\lib\umd\popper.js" />
-    <Content Include="Scripts\lib\umd\popper.min.js" />
+    <Content Include="package.json" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -337,24 +300,15 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Scripts\lib\umd\popper.min.js.map" />
-    <Content Include="Scripts\lib\umd\popper.js.map" />
-    <Content Include="Scripts\lib\umd\popper-utils.min.js.map" />
-    <Content Include="Scripts\lib\umd\popper-utils.js.map" />
-    <Content Include="Scripts\lib\README.md" />
-    <Content Include="Scripts\lib\popper.min.js.map" />
-    <Content Include="Scripts\lib\popper.js.map" />
-    <Content Include="Scripts\lib\popper-utils.min.js.map" />
-    <Content Include="Scripts\lib\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <Content Include="Scripts\lib\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\lib\jquery-3.3.1.min.map" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyTurn.Db\MyTurn.Db.csproj">
@@ -368,10 +322,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\greeter.ts" />
-    <TypeScriptCompile Include="Scripts\lib\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
