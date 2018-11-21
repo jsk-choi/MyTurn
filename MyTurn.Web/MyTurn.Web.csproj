@@ -309,6 +309,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="src\index.less" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyTurn.Db\MyTurn.Db.csproj">
